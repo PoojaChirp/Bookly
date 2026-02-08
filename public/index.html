@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookly AI Customer Support</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="header-content">
+                <h1>📚 Bookly AI Support</h1>
+                <p>Intelligent customer service powered by MongoDB + Gemini AI</p>
+                <div class="header-actions">
+                    <button id="resetBtn" class="reset-btn">🔄 New Chat</button>
+                    <button id="statsBtn" class="stats-btn">📊 Analytics</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="main-content">
+            <div class="chat-section">
+                <div class="chat-container" id="chatContainer">
+                    <div class="message agent-message">
+                        <div class="message-avatar">🤖</div>
+                        <div class="message-bubble">
+                            <div class="message-content">
+                                <strong>Hello! I'm your Bookly AI assistant.</strong>
+                                <p>I can help you with:</p>
+                                <ul>
+                                    <li>📦 Order status and tracking</li>
+                                    <li>🔄 Returns and refunds</li>
+                                    <li>🚚 Shipping information</li>
+                                    <li>🔐 Account and password issues</li>
+                                    <li>💳 Payment questions</li>
+                                    <li>ℹ️ General inquiries</li>
+                                </ul>
+                                <p><em>Try asking: "What's the status of order ORD-12345?" or "How do I return a book?"</em></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="input-section">
+                    <div id="loadingIndicator" class="loading" style="display: none;">
+                        <span class="loading-dots"></span>
+                        <span>AI is thinking...</span>
+                    </div>
+                    
+                    <div class="input-container">
+                        <input 
+                            type="text" 
+                            id="messageInput" 
+                            placeholder="Ask me anything about your orders or our policies..." 
+                            autocomplete="off"
+                        >
+                        <button id="sendBtn" class="send-btn">
+                            <span>Send</span>
+                            <span class="send-icon">➤</span>
+                        </button>
+                    </div>
+                    
+                    <div class="input-hints">
+                        <span class="hint-badge">💡 Tip:</span>
+                        <span class="hint-text">Include your email or order ID for personalized help</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="info-panel" id="infoPanel">
+                <div class="info-header">
+                    <h3>🔍 System Insights</h3>
+                    <button id="closePanelBtn" class="close-btn">✕</button>
+                </div>
+                <div class="info-content" id="infoPanelContent">
+                    <p class="info-placeholder">Analytics will appear here...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="/script.js"></script>
+</body>
+</html>
